@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a-share-watchlist"
+version = "0.1.0"
+description = "A-share observation watchlist screener that exports Excel reports without trading advice."
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.0.0",
+  "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[project.scripts]
+a-share-watchlist = "a_share_watchlist.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

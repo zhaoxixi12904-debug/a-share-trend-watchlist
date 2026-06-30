@@ -1,0 +1,5 @@
+code,name,industry,listing_date,is_st,delisting_risk,exchange,board
+600001,示例科技,电子,2016-03-15,false,false,SSE,主板
+000002,样本制造,机械设备,2012-07-10,false,false,SZSE,主板
+300003,样本医药,医药生物,2025-01-20,false,false,SZSE,创业板
+600004,ST样本,综合,2009-11-02,true,false,SSE,主板

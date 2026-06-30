@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 股趋势观察报告定制</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #5b6472;
+      --line: #d8dee7;
+      --paper: #f5f7f8;
+      --panel: #ffffff;
+      --green: #0f766e;
+      --red: #b42318;
+      --blue: #1d4ed8;
+      --gold: #a16207;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    header {
+      padding: 56px 20px 34px;
+      background:
+        linear-gradient(rgba(10, 20, 28, 0.82), rgba(10, 20, 28, 0.65)),
+        url("https://images.unsplash.com/photo-1642790551116-18e150f248e5?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: white;
+    }
+
+    .wrap {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(36px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 20px 0 0;
+      font-size: clamp(18px, 2.2vw, 24px);
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: var(--green);
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    section {
+      padding: 42px 20px;
+    }
+
+    .band {
+      background: white;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .price {
+      margin: 8px 0;
+      font-size: 38px;
+      font-weight: 900;
+    }
+
+    .muted { color: var(--muted); }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    li { margin: 7px 0; }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 4px 6px 4px 0;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: #e8f2f0;
+      color: #0f5f57;
+      font-weight: 750;
+    }
+
+    .notice {
+      border-left: 4px solid var(--gold);
+      padding: 14px 16px;
+      background: #fff8e6;
+    }
+
+    @media (max-width: 860px) {
+      .grid,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>A 股趋势观察报告定制</h1>
+      <p class="lead">基于公开行情、东方财富行业分类、政策和产业趋势，生成带图表的 Excel 观察名单。</p>
+      <div class="actions">
+        <a class="button" href="#pricing">查看服务</a>
+        <a class="button secondary" href="outputs/trend_watchlist_2026.xlsx">打开样例报告</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>报告会看什么</h2>
+      <div>
+        <span class="pill">新型储能与电池</span>
+        <span class="pill">新型电力系统</span>
+        <span class="pill">AI 算力与国产硬件</span>
+        <span class="pill">创新药与医疗研发</span>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>5日</strong><span class="muted">短期强弱</span></div>
+        <div class="metric"><strong>20日</strong><span class="muted">阶段趋势</span></div>
+        <div class="metric"><strong>60日</strong><span class="muted">中期位置</span></div>
+        <div class="metric"><strong>成交额</strong><span class="muted">放大倍数</span></div>
+        <div class="metric"><strong>MA20</strong><span class="muted">均线位置</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>服务定价</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>单周报告</h3>
+          <div class="price">¥29</div>
+          <p class="muted">适合先试用。</p>
+          <ul>
+            <li>一份 Excel 趋势观察报告</li>
+            <li>行业判断</li>
+            <li>走势概览图表</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>定制行业报告</h3>
+          <div class="price">¥199</div>
+          <p class="muted">适合你指定行业或股票池。</p>
+          <ul>
+            <li>3-5 个指定行业</li>
+            <li>自定义参数</li>
+            <li>观察名单和风险提示</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>私有化部署</h3>
+          <div class="price">¥999+</div>
+          <p class="muted">适合想自己长期运行。</p>
+          <ul>
+            <li>本地环境部署</li>
+            <li>数据源对接</li>
+            <li>自动生成 Excel</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>合规边界</h2>
+      <div class="notice">
+        本服务只做数据整理、行业趋势观察和候选观察名单，不构成投资建议，不提供买入、卖出、目标价或仓位建议。
+      </div>
+    </div>
+  </section>
+</body>
+</html>
