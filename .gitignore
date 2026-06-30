@@ -8,5 +8,6 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+src/*.egg-info/
 outputs/*.tmp
 outputs/*.log
