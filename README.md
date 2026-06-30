@@ -1,4 +1,6 @@
-# A 股候选股票筛选助手
+# A Share Trend Watchlist
+
+Repository name: `a-share-trend-watchlist`
 
 这是一个只输出“观察名单”的 Python 项目，不做自动交易，不输出买入、卖出、目标价或仓位建议。
 
@@ -18,7 +20,7 @@
 ## 项目结构
 
 ```text
-a_share_watchlist_assistant/
+a-share-trend-watchlist/
   README.md
   pyproject.toml
   requirements.txt
