@@ -119,6 +119,14 @@ README 首屏应该展示：
 - 海外：PayPal；
 - 长期：GitHub Sponsors。
 
+公开联系方式：
+
+```text
+Email: 1183689876@qq.com
+WeChat: XY12904
+GitHub: https://github.com/zhaoxixi12904-debug/a-share-trend-watchlist
+```
+
 成交话术：
 
 ```text

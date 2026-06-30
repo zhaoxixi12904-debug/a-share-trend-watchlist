@@ -53,4 +53,9 @@ outputs/trend_watchlist_2026.xlsx
 - 私有化部署；
 - 自定义数据源。
 
+联系方式：
+
+- Email: 1183689876@qq.com
+- WeChat: XY12904
+
 报告只做数据整理和观察名单，不构成交易建议。

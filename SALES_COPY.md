@@ -65,3 +65,11 @@
 
 交付是 Excel，里面有图表和观察名单。
 ```
+
+## 公开联系方式
+
+```text
+Email: 1183689876@qq.com
+WeChat: XY12904
+GitHub: https://github.com/zhaoxixi12904-debug/a-share-trend-watchlist
+```
